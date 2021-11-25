@@ -1,0 +1,35 @@
+@media screen and (max-width: 1020px) {
+  .navbar {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .open_sidebar {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 760px) {
+  .runner {
+    left: 9px !important;
+  }
+  .buttons_catalog {
+    width: 100% !important;
+    justify-content: space-evenly !important;
+  }
+  .our_favorites {
+    .favorites_category,
+    .products {
+      flex-direction: column;
+      .item {
+        width: 100% !important;
+      }
+    }
+  }
+  .confidentiality,
+  .sign_up {
+    width: 92% !important;
+  }
+  .footer {
+    height: max-content !important;
+  }
+}

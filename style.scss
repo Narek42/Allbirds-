@@ -1,0 +1,788 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+$font: "font-family: 'Roboto', sans-serif";
+
+@function rem($px) {
+  $result: $px / 16 + rem;
+  @return $result;
+}
+@mixin product {
+  @media screen and (max-width: 500px) {
+    .product {
+      flex-direction: column;
+      .item {
+        width: 100% !important;
+        margin: 40px 0px !important;
+      }
+    }
+  }
+  .product {
+    width: 100%;
+    position: relative;
+
+    .slider {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 30%;
+      z-index: 1;
+      width: 100%;
+      height: 75px;
+      .slide {
+        width: 75px;
+        height: 75px;
+        top: 0px;
+        img {
+          cursor: pointer;
+          top: 0px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .controller {
+      display: flex;
+      position: relative;
+      width: 90%;
+      margin: auto;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      .slide_right {
+        right: 0px;
+      }
+      .item {
+        width: 31.333%;
+        padding: 1%;
+        flex: 0 0 auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .item_name {
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(22);
+          line-height: 29px;
+          letter-spacing: 0.5px;
+          color: #212a2f;
+        }
+        .about_item {
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: rem(16);
+          line-height: 24px;
+          letter-spacing: 1px;
+          color: #212a2f;
+        }
+      }
+    }
+  }
+}
+@mixin navigator {
+  .navigator {
+    width: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .navigator_li {
+      margin: 0px 20px;
+      font-family: $font;
+      font-weight: normal;
+      font-size: rem(12);
+      line-height: 21px;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    .links {
+      display: flex;
+      justify-content: space-evenly;
+      width: 25%;
+      align-items: center;
+      img {
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  white-space: nowrap;
+}
+body {
+  max-width: 100%;
+  margin: auto;
+  background: #ffffff;
+}
+.main {
+  .navbar_main {
+    position: relative;
+  }
+  .navbar {
+    user-select: none;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include navigator();
+    .logo {
+      img {
+        user-select: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    opacity: 0.98;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+  }
+  .navigator_li_sidebar {
+    margin: 0px 20px;
+    font-family: $font;
+    font-weight: normal;
+    font-size: rem(18);
+    line-height: 21px;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: rem(20);
+    color: white;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  .open_sidebar {
+    font-size: rem(35);
+    color: snow;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+  }
+  .container {
+    .banner {
+      width: 100%;
+      background-position: center;
+      height: 740px;
+      background-image: url("./images/Rectangle.png");
+      position: relative;
+      .runner {
+        position: absolute;
+        bottom: 74px;
+        left: 54px;
+        .the_trail {
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(58);
+          line-height: 63px;
+          letter-spacing: 0.5px;
+          color: #ffffff;
+        }
+        .durable {
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(16);
+          line-height: 24px;
+          letter-spacing: 0.5px;
+          color: #ffffff;
+          margin-bottom: 25px;
+        }
+        .buttons_catalog {
+          width: rem(400);
+          height: rem(50);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .shop_btn {
+          width: rem(180);
+          height: rem(48);
+          background: #ffffff;
+          border-radius: 2px;
+          font-family: $font;
+          border: none;
+          font-weight: bold;
+          font-size: rem(14);
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #212a2f;
+          cursor: pointer;
+          transition: font-size 0.2s linear;
+        }
+        button:active {
+          font-size: rem(13.5);
+        }
+        button:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .our_favorites {
+    width: 80%;
+    margin: 119px auto 32px auto;
+    .context {
+      width: 100%;
+      text-align: center;
+      font-style: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(32);
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+      margin-bottom: 32px;
+    }
+    .favorites_category {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-bottom: solid 3px #d3d4d5;
+    }
+    .products {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 34px;
+      .item {
+        width: 30%;
+        height: auto;
+        .season {
+          margin: 12px;
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: rem(16);
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #212a2f;
+          cursor: pointer;
+        }
+        .item_img {
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          .for_gender {
+            width: 100%;
+            height: max-content;
+            position: absolute;
+            top: calc(50% - (108px / 2));
+            left: 0px;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+            button {
+              width: 100%;
+              height: 48px;
+              background: #ffffff;
+              border-radius: 2px;
+              font-family: $font;
+              border: none;
+              font-weight: bold;
+              font-size: rem(14);
+              line-height: 16px;
+              text-align: center;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: #212a2f;
+              cursor: pointer;
+              transition: font-size 0.2s linear;
+            }
+            button:active {
+              font-size: rem(13.5);
+            }
+            button:hover {
+              opacity: 0.9;
+            }
+            .for_women {
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+      .item {
+        img:hover ~ .for_gender {
+          opacity: 1;
+        }
+        .for_gender:hover {
+          opacity: 1;
+        }
+      }
+      .item_name {
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(22);
+        line-height: 29px;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+        margin-top: 17px;
+        border-bottom: solid 1px #d3d4d5;
+        padding: 5px;
+      }
+      .season {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+        p {
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: rem(14);
+          line-height: 20px;
+          letter-spacing: 0.4px;
+          color: #212a2f;
+        }
+      }
+    }
+  }
+  .change_season {
+    margin: auto;
+    .change_season_banner {
+      width: 100%;
+      height: 542px;
+      margin-top: 140px;
+      background-image: url("./images/Rectangle_7.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .change_your_shoes {
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(32);
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+      margin-top: 52px;
+    }
+    .soft_and_cozy {
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(16);
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+      margin-top: 54px;
+    }
+    .change_seasons_btn {
+      text-align: center;
+      margin-top: 30px;
+      button {
+        cursor: pointer;
+        width: 180px;
+        height: 48px;
+        background: #212a2f;
+        border: 2px solid #212a2f;
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(14);
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        transition: all 0.3s linear;
+      }
+      button:active {
+        font-size: rem(13.5);
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  .shop_collections {
+    width: 90%;
+    margin: auto;
+    margin-top: 119px;
+    .context {
+      p {
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(32);
+        line-height: 42px;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+      }
+    }
+    @include product();
+  }
+  .made_from_nature {
+    width: 100%;
+    margin-top: 134px;
+    .derevo {
+      width: 100%;
+      height: 545px;
+      background-image: url("./images/snapshot\ 1.png");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .context {
+      width: 100%;
+      margin: auto;
+      .made_from {
+        margin-top: 44px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(32);
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+      }
+      .we_craft {
+        margin-top: 22px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(16);
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+      }
+      div {
+        width: 384px;
+        margin: 26px auto auto auto;
+        button {
+          width: 384px;
+          height: 48px;
+          background: #212a2f;
+          border: 2px solid #212a2f;
+          box-sizing: border-box;
+          border-radius: 2px;
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(14);
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #ffffff;
+          cursor: pointer;
+          transition: all 0.3s linear;
+        }
+        button:active {
+          font-size: rem(13);
+        }
+
+        button:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .new_arrivals {
+    width: 90%;
+    margin: 119px auto auto auto;
+    .context {
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(32);
+      line-height: 42px;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+    }
+    @include product();
+  }
+  .reversing_climate {
+    width: 100%;
+    margin-top: 138px;
+    .banner {
+      width: 100%;
+      height: 542px;
+      background-image: url("./images/revers.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 542px;
+    }
+    .reversing_climate_text {
+      width: 90%;
+      margin: 52px auto auto auto;
+      .context {
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(32);
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+      }
+      .reducing {
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(16);
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #212a2f;
+        padding: 8px 0px;
+      }
+      div {
+        width: 100%;
+        text-align: center;
+        margin-top: 26px;
+        button {
+          width: rem(384);
+          height: rem(48);
+          background: #212a2f;
+          border: 2px solid #212a2f;
+          box-sizing: border-box;
+          border-radius: 2px;
+          font-family: $font;
+          font-style: normal;
+          font-weight: bold;
+          font-size: rem(14);
+          line-height: 16px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #ffffff;
+          cursor: pointer;
+          transition: all 0.3s linear;
+        }
+        button:active {
+          font-size: rem(13.5);
+        }
+        button:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+  .stories {
+    width: 90%;
+    margin: 119px auto auto auto;
+    .context {
+      font-family: $font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(32);
+      line-height: 42px;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+    }
+    .product {
+      margin-top: 24px;
+    }
+    @include product();
+  }
+  .want_first {
+    width: 100%;
+    margin-top: 186px;
+    .context {
+      font-family: $font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(32);
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      color: #212a2f;
+    }
+    .want_first_text {
+      font-family: $font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(16);
+      line-height: 24px;
+      padding: 25px;
+      text-align: center;
+      letter-spacing: 0.5px;
+
+      color: #212a2f;
+    }
+    .sign_up {
+      width: 60%;
+      height: 48px;
+      margin: auto;
+      display: flex;
+      input {
+        width: 100%;
+        height: 48px;
+        background: #ffffff;
+        border-radius: 0px;
+        border: none;
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(14);
+        line-height: 14px;
+        text-align: center;
+        color: black;
+        border-bottom: solid 2px #212a2f;
+        outline: none;
+        margin: rem(6);
+      }
+      input::placeholder {
+        color: rgba(0, 0, 0, 0.22);
+      }
+      button {
+        width: rem(111);
+        height: 48px;
+        background: #212a2f;
+        border: none;
+        margin: rem(6);
+        box-sizing: border-box;
+        border-radius: 2px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(14);
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: #ffffff;
+        transition: all 0.2s linear;
+      }
+      button:active {
+        font-size: rem(13.5);
+      }
+      button:hover {
+        opacity: 0.9;
+      }
+    }
+    .confidentiality {
+      width: 60%;
+      margin: auto;
+      display: flex;
+      padding: 16px 0px;
+      justify-content: space-evenly;
+      p {
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(14);
+        line-height: 14px;
+        text-align: center;
+        color: #74797c;
+      }
+    }
+  }
+  .footer {
+    width: 100%;
+    height: 550px;
+    background: #212a2f;
+    margin-top: 48px;
+    .columns {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        padding: 15px 25px;
+        width: 20%;
+        min-width: 25%;
+        p {
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: rem(14);
+          line-height: 21px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin: 15px;
+        }
+        li {
+          width: max-content;
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: rem(12);
+          line-height: 12px;
+          letter-spacing: 0.5px;
+          color: #ffffff;
+          margin: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+    .allbirds {
+      margin-top: 126px;
+      text-align: center;
+      font-family: $font;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(12);
+      line-height: 18px;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      padding: 5px;
+    }
+  }
+}

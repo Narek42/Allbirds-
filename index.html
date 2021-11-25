@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./images/allbirds.png"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <link href="MediaStyle.css" rel="stylesheet" />
+    <title>Allbirds online shop</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav class="navbar_main">
+        <div class="navbar">
+          <div class="navigator">
+            <li class="navigator_li">Men</li>
+            <li class="navigator_li">Women</li>
+            <li class="navigator_li">New Arrivals</li>
+          </div>
+          <div class="logo">
+            <img src="./images/Vector.png" alt="" />
+          </div>
+          <div class="navigator">
+            <li class="navigator_li">Sustainability</li>
+            <li class="navigator_li">Stores</li>
+            <div class="links">
+              <img src="./images/user.png" alt="user" />
+              <img src="./images/icon_harch.png" alt="" />
+              <img src="./images/shoping.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="navigator">
+            <li class="navigator_li_sidebar">Men</li>
+            <li class="navigator_li_sidebar">Women</li>
+            <li class="navigator_li_sidebar">New Arrivals</li>
+          </div>
+          <div class="logo">
+            <img src="./images/Vector.png" alt="" />
+          </div>
+          <div class="navigator">
+            <li class="navigator_li_sidebar">Sustainability</li>
+            <li class="navigator_li_sidebar">Stores</li>
+            <div class="links">
+              <img src="./images/user.png" alt="user" />
+              <img src="./images/icon_harch.png" alt="" />
+              <img src="./images/shoping.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <span class="open_sidebar" onclick="openNav()">&#9776;</span>
+      </nav>
+      <div class="container">
+        <div class="banner">
+          <div class="runner">
+            <p class="the_trail">The Trail Runner SWT Is Here.</p>
+            <p class="durable">Durable. Comfortable. Ready to get dirty.</p>
+            <div class="buttons_catalog">
+              <button class="shop_btn">Shop Men</button>
+              <button class="shop_btn">Shop Women</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="our_favorites">
+        <div class="context">Our Favorites</div>
+        <div class="favorites_category"></div>
+        <div class="products">
+          <div class="item">
+            <div class="season">Everyday</div>
+
+            <div class="item_img">
+              <img src="./images/Rectangle_3.png" alt="" />
+              <div class="for_gender">
+                <button class="for_men">Shop Men</button>
+                <button class="for_women">Shop Women</button>
+              </div>
+            </div>
+            <p class="item_name">Wool Runner</p>
+            <div class="season">
+              <img src="./images/Rectangle_4.png" alt="" />
+              <p>Cozy Sneaker</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="season">Running</div>
+
+            <div class="item_img">
+              <img src="./images/Rectangle_1.png" alt="" />
+              <div class="for_gender">
+                <button class="for_men">Shop Men</button>
+                <button class="for_women">Shop Women</button>
+              </div>
+            </div>
+            <p class="item_name">Tree Runner</p>
+            <div class="season">
+              <img src="./images/Rectangle_5.png" alt="" />
+              <p>Light and Breezy Sneaker</p>
+            </div>
+          </div>
+          <div class="item">
+            <div class="season">Travel</div>
+            <div class="item_img">
+              <img src="./images/Rectangle_2.png" alt="" />
+              <div class="for_gender">
+                <button class="for_men">Shop Men</button>
+                <button class="for_women">Shop Women</button>
+              </div>
+            </div>
+            <p class="item_name">Wool Runner Mizzle</p>
+            <div class="season">
+              <img src="./images/Rectangle_6.png" alt="" />
+              <p>Rain-Ready Sneaker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="change_season">
+        <div class="change_season_banner"></div>
+        <p class="change_your_shoes">
+          Seasons Change. Your Shoes Don’t Have To.
+        </p>
+        <p class="soft_and_cozy">
+          Soft and cozy wool shoes to keep you comfortable all year round.
+        </p>
+        <div class="change_seasons_btn">
+          <button>SHOP MEN</button>
+          <button>SHOP WOMEN</button>
+        </div>
+      </div>
+      <div class="shop_collections">
+        <div class="context">
+          <p>Shop The Collections</p>
+        </div>
+        <div class="product">
+          <div class="slider">
+            <div
+              onclick="slideLeft('shop_collections')"
+              class="slide slide_left"
+            >
+              <img src="./images/slide_left.png" alt="" />
+            </div>
+            <div
+              onclick="slideRight('shop_collections')"
+              class="slide slide_right"
+            >
+              <img src="./images/slide_right.png" alt="" />
+            </div>
+          </div>
+          <div class="controller">
+            <div class="item">
+              <img src="./images/Rectangle_10.png" alt="" />
+              <p class="item_name">New Arrivals</p>
+              <p class="about_item">
+                The latest styles and limited edition colors that you can only
+                find here (while they last, that is).
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/Rectangle_8.png" alt="" />
+              <p class="item_name">Natural Run Collection</p>
+              <p class="about_item">
+                Looking for more sustainable ways to break a sweat? We’ve got
+                you covered from head to toe.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/Rectangle_9.png" alt="" />
+              <p class="item_name">Fresh Long Sleeve Tee Colors</p>
+              <p class="about_item">
+                It’s crisp, clean and ready for wherever the day takes you.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/Rectangle_9.png" alt="" />
+              <p class="item_name">Fresh Long Sleeve Tee Colors</p>
+              <p class="about_item">
+                It’s crisp, clean and ready for wherever the day takes you.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/Rectangle_9.png" alt="" />
+              <p class="item_name">Fresh Long Sleeve Tee Colors</p>
+              <p class="about_item">
+                It’s crisp, clean and ready for wherever the day takes you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="made_from_nature">
+        <div class="derevo"></div>
+        <div class="context">
+          <p class="made_from">Made From Nature, For Nature</p>
+          <p class="we_craft">
+            We craft with planet-friendly natural materials, like merino wool
+            and eucalyptus trees,<br />
+            because they're our best chance for a sustainable future.
+          </p>
+          <div>
+            <button>See How</button>
+          </div>
+        </div>
+      </div>
+      <div class="new_arrivals">
+        <div class="context">New Arrivals</div>
+        <div class="product">
+          <div class="slider">
+            <div onclick="slideLeft('new_arrivals')" class="slide slide_left">
+              <img src="./images/slide_left.png" alt="" />
+            </div>
+            <div onclick="slideRight('new_arrivals')" class="slide slide_right">
+              <img src="./images/slide_right.png" alt="" />
+            </div>
+          </div>
+          <div class="controller">
+            <div class="item">
+              <img src="./images/boots_3.png" alt="" />
+              <p class="item_name">Men's Trail Runner SWT</p>
+              <p class="about_item">Classic Color, Natural Black</p>
+            </div>
+            <div class="item">
+              <img src="./images/boots_2.png" alt="" />
+              <p class="item_name">Women's Trail Runner SWT</p>
+              <p class="about_item">Classic Color, Natural White</p>
+            </div>
+            <div class="item">
+              <img src="./images/boots_1.png" alt="" />
+              <p class="item_name">Men's Trail Runner SWT</p>
+              <p class="about_item">Limited Edition Color, Diablo</p>
+            </div>
+            <div class="item">
+              <img src="./images/boots_1.png" alt="" />
+              <p class="item_name">Men's Trail Runner SWT</p>
+              <p class="about_item">Limited Edition Color, Diablo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reversing_climate">
+        <div class="banner"></div>
+        <div class="reversing_climate_text">
+          <div class="context">
+            Reversing Climate Change Through Better Business
+          </div>
+          <p class="reducing">
+            Reducing our environmental impact has been a top priority since day
+            one. But now, we’re taking things further. Explore our overall
+            sustainability approach, our progress thus far, and our bold list of
+            commitments for 2025.
+          </p>
+          <div>
+            <button>Our Sustainable Practices</button>
+          </div>
+        </div>
+      </div>
+      <div class="stories">
+        <div class="context">Stories</div>
+        <div class="product">
+          <div class="slider">
+            <div onclick="slideLeft('stories')" class="slide slide_left">
+              <img src="./images/slide_left.png" alt="" />
+            </div>
+            <div onclick="slideRight('stories')" class="slide slide_right">
+              <img src="./images/slide_right.png" alt="" />
+            </div>
+          </div>
+
+          <div class="controller">
+            <div class="item">
+              <img src="./images/stories_1.png" alt="" />
+              <p class="item_name">Planet-Friendly Activewear</p>
+              <p class="about_item">
+                The Natural Run Collection is made with sustainable materials
+                that can stand up to your toughest workout.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/stories_2.png" alt="" />
+              <p class="item_name">Adidas and Allbirds</p>
+              <p class="about_item">
+                Learn more about FUTURECRAFT. FOOTPRINT, our collaborative shoe
+                coming soon.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/stories_3.png" alt="" />
+              <p class="item_name">How much did your outfit cost the planet?</p>
+              <p class="about_item">
+                Now any brand can use our Carbon Footprint tools to label their
+                emissions.
+              </p>
+            </div>
+            <div class="item">
+              <img src="./images/stories_3.png" alt="" />
+              <p class="item_name">How much did your outfit cost the planet?</p>
+              <p class="about_item">
+                Now any brand can use our Carbon Footprint tools to label their
+                emissions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="want_first">
+        <div class="context">Want First Dibs?</div>
+        <div class="want_first_text">
+          Join our email list and be the first to know about new limited edition
+          products, material innovations, and lots of other fun updates.
+        </div>
+        <div class="sign_up">
+          <input
+            placeholder="Enter Your Email Address
+"
+            type="text"
+          />
+          <button>Sign up</button>
+        </div>
+        <div class="confidentiality">
+          <p>Note: You can opt-out at any time. See our</p>
+          <p>Privacy Policy and Terms</p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="columns">
+          <div class="help">
+            <p>Help</p>
+            <li>1-888-963-8944</li>
+            <li>1-814-251-9966</li>
+            <li>help@allbirds.com</li>
+            <li>Returns/Exchanges</li>
+            <li>FAQ/Contact Us</li>
+            <li>Afterpay</li>
+          </div>
+          <div class="shop">
+            <p>Shop</p>
+            <li>Men's Shoes</li>
+            <li>Women's Shoes</li>
+            <li>Men's Apparel</li>
+            <li>Women's Apparel</li>
+            <li>Socks</li>
+            <li>Gift Cards</li>
+            <li>Download the Allbirds App</li>
+          </div>
+          <div class="company">
+            <p>Company</p>
+            <li>Our Stores</li>
+            <li>Our Materials</li>
+            <li>Our Materials</li>
+            <li>Sustainability</li>
+            <li>Partnerships</li>
+            <li>Product Testing</li>
+            <li>Affiliates</li>
+            <li>Bulk Orders</li>
+            <li>Careers</li>
+            <li>Press</li>
+            <li>California Transparency Act</li>
+          </div>
+        </div>
+        <div class="allbirds">
+          © 2021 Allbirds, Inc. All Rights Reserved. Terms Privacy &
+          Accessibility
+        </div>
+      </div>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "100%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+      function slideLeft(el) {
+        let elm = document.querySelector(`.${el} > .product > .controller`);
+        var maxScrollLeft = elm.scrollWidth - elm.clientWidth; // 32.333
+        let item = document.querySelector(
+          `.${el} > .product > .controller > .item`
+        );
+        elm.scrollLeft -= item.offsetWidth;
+      }
+
+      function slideRight(el) {
+        let elm = document.querySelector(`.${el} > .product > .controller`);
+        var maxScrollLeft = elm.scrollWidth - elm.clientWidth; // 32.333
+        let item = document.querySelector(
+          `.${el} > .product > .controller > .item`
+        );
+        console.log(elm.scrollLeft + item.offsetWidth, maxScrollLeft);
+        if (elm.scrollLeft + item.offsetWidth <= maxScrollLeft) {
+          elm.scrollLeft += item.offsetWidth;
+        }
+      }
+    </script>
+  </body>
+</html>
